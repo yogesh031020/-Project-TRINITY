@@ -1,30 +1,132 @@
-==========================================================================================
-   TRINITY: FINAL MISSION SIMULATION - SWARM TARGET ACQUISITION
-==========================================================================================
-Step  | Leader Pos         | Formation    | Dist to Target
-------------------------------------------------------------------------------------------
-00    | (82,33)            | SYNCING      | 203.57m
-01    | (88,41)            | SYNCING      | 193.57m
-02    | (94,49)            | SYNCING      | 183.57m
-03    | (100,58)           | SYNCING      | 173.57m
-04    | (105,66)           | SYNCING      | 163.57m
-05    | (111,74)           | SYNCING      | 153.57m
-06    | (117,82)           | SYNCING      | 143.57m
-07    | (123,90)           | SYNCING      | 133.57m
-08    | (128,98)           | SYNCING      | 123.57m
-09    | (134,107)          | SYNCING      | 113.57m
-10    | (140,115)          | SYNCING      | 103.57m
-11    | (146,123)          | SYNCING      | 93.57m
-12    | (151,131)          | SYNCING      | 83.57m
-13    | (157,139)          | SYNCING      | 73.57m
-14    | (163,148)          | SYNCING      | 63.57m
-15    | (169,156)          | SYNCING      | 53.57m
-16    | (174,164)          | SYNCING      | 43.57m
-17    | (180,172)          | SYNCING      | 33.57m
-18    | (186,180)          | SYNCING      | 23.57m
-19    | (192,188)          | SYNCING      | 13.57m
-20    | (197,197)          | SYNCING      | 3.57m
 
-[SUCCESS] Swarm Target Acquired. Mission Complete.
-==========================================================================================
-[TRINITY] Portfolio Finalized Successfully.
+=========================================================================================================
+     [UAV] TRINITY: ROS 2 / GAZEBO SWARM COORDINATION FLIGHT ENGINE (MATHEMATICAL SIMULATION)
+=========================================================================================================
+Step  | Active UAVs | Formation  | Leader Pos (X,Y,Z)   | Formation Err | Mesh Status
+---------------------------------------------------------------------------------------------------------
+Step 00 | UAVs: 6/6 | V-SHAPE   | (10.5, -0.9, 0.0)    | Err: 13.98m    | TRANSITION | HEALTHY (All link)
+Step 01 | UAVs: 6/6 | V-SHAPE   | (10.5, -0.9, 0.0)    | Err: 13.94m    | TRANSITION | HEALTHY (All link)
+Step 02 | UAVs: 6/6 | V-SHAPE   | (10.5, -0.8, 0.0)    | Err: 13.88m    | TRANSITION | HEALTHY (All link)
+Step 03 | UAVs: 6/6 | V-SHAPE   | (10.6, -0.8, 0.0)    | Err: 13.80m    | TRANSITION | HEALTHY (All link)
+Step 04 | UAVs: 6/6 | V-SHAPE   | (10.7, -0.7, 0.0)    | Err: 13.70m    | TRANSITION | HEALTHY (All link)
+Step 05 | UAVs: 6/6 | V-SHAPE   | (10.7, -0.6, 0.0)    | Err: 13.58m    | TRANSITION | HEALTHY (All link)
+Step 06 | UAVs: 6/6 | V-SHAPE   | (10.8, -0.5, 0.1)    | Err: 13.45m    | TRANSITION | HEALTHY (All link)
+Step 07 | UAVs: 6/6 | V-SHAPE   | (11.0, -0.4, 0.1)    | Err: 13.29m    | TRANSITION | HEALTHY (All link)
+Step 08 | UAVs: 6/6 | V-SHAPE   | (11.1, -0.2, 0.1)    | Err: 13.12m    | TRANSITION | HEALTHY (All link)
+Step 09 | UAVs: 6/6 | V-SHAPE   | (11.2, -0.1, 0.1)    | Err: 12.93m    | TRANSITION | HEALTHY (All link)
+Step 10 | UAVs: 6/6 | V-SHAPE   | (11.4, 0.1, 0.1)     | Err: 12.72m    | TRANSITION | HEALTHY (All link)
+Step 11 | UAVs: 6/6 | V-SHAPE   | (11.5, 0.2, 0.1)     | Err: 12.50m    | TRANSITION | HEALTHY (All link)
+Step 12 | UAVs: 6/6 | V-SHAPE   | (11.7, 0.4, 0.2)     | Err: 12.28m    | TRANSITION | HEALTHY (All link)
+Step 13 | UAVs: 6/6 | V-SHAPE   | (11.9, 0.6, 0.2)     | Err: 12.07m    | TRANSITION | HEALTHY (All link)
+Step 14 | UAVs: 6/6 | V-SHAPE   | (12.1, 0.9, 0.2)     | Err: 11.93m    | TRANSITION | HEALTHY (All link)
+Step 15 | UAVs: 6/6 | V-SHAPE   | (12.3, 1.1, 0.2)     | Err: 11.82m    | TRANSITION | HEALTHY (All link)
+Step 16 | UAVs: 6/6 | V-SHAPE   | (12.5, 1.4, 0.3)     | Err: 11.72m    | TRANSITION | HEALTHY (All link)
+Step 17 | UAVs: 6/6 | V-SHAPE   | (12.8, 1.6, 0.3)     | Err: 11.63m    | TRANSITION | HEALTHY (All link)
+Step 18 | UAVs: 6/6 | V-SHAPE   | (13.0, 1.9, 0.3)     | Err: 11.55m    | TRANSITION | HEALTHY (All link)
+Step 19 | UAVs: 6/6 | V-SHAPE   | (13.3, 2.2, 0.4)     | Err: 11.49m    | TRANSITION | HEALTHY (All link)
+
+[WARN] CRITICAL EXCEPTION TRIGGERED ON UAV_3! Heartbeat lost.
+[MESH] Dynamic Swarm Re-indexing initiated... Switching to CIRCLE formation!
+---------------------------------------------------------------------------------------------------------
+Step 20 | UAVs: 5/6 | CIRCLE    | (13.6, 2.5, 0.4)     | Err: 13.25m    | TRANSITION | HEALING Mesh active
+Step 21 | UAVs: 5/6 | CIRCLE    | (13.9, 2.8, 0.5)     | Err: 13.54m    | TRANSITION | HEALING Mesh active
+Step 22 | UAVs: 5/6 | CIRCLE    | (14.2, 3.2, 0.5)     | Err: 13.83m    | TRANSITION | HEALING Mesh active
+Step 23 | UAVs: 5/6 | CIRCLE    | (14.5, 3.5, 0.5)     | Err: 14.13m    | TRANSITION | HEALING Mesh active
+Step 24 | UAVs: 5/6 | CIRCLE    | (14.8, 3.9, 0.6)     | Err: 14.43m    | TRANSITION | HEALING Mesh active
+Step 25 | UAVs: 5/6 | CIRCLE    | (15.2, 4.3, 0.6)     | Err: 14.72m    | TRANSITION | HEALING Mesh active
+Step 26 | UAVs: 5/6 | CIRCLE    | (15.5, 4.7, 0.7)     | Err: 15.02m    | TRANSITION | HEALING Mesh active
+Step 27 | UAVs: 5/6 | CIRCLE    | (15.9, 5.1, 0.7)     | Err: 15.32m    | TRANSITION | HEALING Mesh active
+Step 28 | UAVs: 5/6 | CIRCLE    | (16.3, 5.5, 0.8)     | Err: 15.62m    | TRANSITION | HEALING Mesh active
+Step 29 | UAVs: 5/6 | CIRCLE    | (16.7, 6.0, 0.9)     | Err: 15.92m    | TRANSITION | HEALING Mesh active
+Step 30 | UAVs: 5/6 | CIRCLE    | (17.1, 6.4, 0.9)     | Err: 16.22m    | TRANSITION | HEALING Mesh active
+Step 31 | UAVs: 5/6 | CIRCLE    | (17.5, 6.9, 1.0)     | Err: 16.52m    | TRANSITION | HEALING Mesh active
+Step 32 | UAVs: 5/6 | CIRCLE    | (18.0, 7.4, 1.0)     | Err: 16.83m    | TRANSITION | HEALING Mesh active
+Step 33 | UAVs: 5/6 | CIRCLE    | (18.4, 7.9, 1.1)     | Err: 17.13m    | TRANSITION | HEALING Mesh active
+Step 34 | UAVs: 5/6 | CIRCLE    | (18.9, 8.4, 1.2)     | Err: 17.44m    | TRANSITION | HEALING Mesh active
+Step 35 | UAVs: 5/6 | CIRCLE    | (19.4, 8.9, 1.2)     | Err: 17.74m    | TRANSITION | HEALING Mesh active
+Step 36 | UAVs: 5/6 | CIRCLE    | (19.9, 9.5, 1.3)     | Err: 18.05m    | TRANSITION | HEALING Mesh active
+Step 37 | UAVs: 5/6 | CIRCLE    | (20.4, 10.0, 1.4)    | Err: 18.36m    | TRANSITION | HEALING Mesh active
+Step 38 | UAVs: 5/6 | CIRCLE    | (20.9, 10.6, 1.4)    | Err: 18.67m    | TRANSITION | HEALING Mesh active
+Step 39 | UAVs: 5/6 | CIRCLE    | (21.4, 11.2, 1.5)    | Err: 18.98m    | TRANSITION | HEALING Mesh active
+Step 40 | UAVs: 5/6 | CIRCLE    | (22.0, 11.8, 1.6)    | Err: 19.27m    | TRANSITION | HEALING Mesh active
+Step 41 | UAVs: 5/6 | CIRCLE    | (22.5, 12.4, 1.6)    | Err: 19.56m    | TRANSITION | HEALING Mesh active
+Step 42 | UAVs: 5/6 | CIRCLE    | (23.0, 13.0, 1.7)    | Err: 19.83m    | TRANSITION | HEALING Mesh active
+Step 43 | UAVs: 5/6 | CIRCLE    | (23.6, 13.6, 1.8)    | Err: 20.09m    | TRANSITION | HEALING Mesh active
+Step 44 | UAVs: 5/6 | CIRCLE    | (24.1, 14.2, 1.9)    | Err: 20.33m    | TRANSITION | HEALING Mesh active
+Step 45 | UAVs: 5/6 | CIRCLE    | (24.6, 14.7, 1.9)    | Err: 20.57m    | TRANSITION | HEALING Mesh active
+Step 46 | UAVs: 5/6 | CIRCLE    | (25.2, 15.3, 2.0)    | Err: 20.78m    | TRANSITION | HEALING Mesh active
+Step 47 | UAVs: 5/6 | CIRCLE    | (25.7, 15.9, 2.1)    | Err: 20.99m    | TRANSITION | HEALING Mesh active
+Step 48 | UAVs: 5/6 | CIRCLE    | (26.2, 16.5, 2.2)    | Err: 21.18m    | TRANSITION | HEALING Mesh active
+Step 49 | UAVs: 5/6 | CIRCLE    | (26.8, 17.1, 2.2)    | Err: 21.36m    | TRANSITION | HEALING Mesh active
+Step 50 | UAVs: 5/6 | CIRCLE    | (27.3, 17.7, 2.3)    | Err: 21.53m    | TRANSITION | HEALING Mesh active
+Step 51 | UAVs: 5/6 | CIRCLE    | (27.9, 18.3, 2.4)    | Err: 21.70m    | TRANSITION | HEALING Mesh active
+Step 52 | UAVs: 5/6 | CIRCLE    | (28.4, 18.9, 2.5)    | Err: 21.85m    | TRANSITION | HEALING Mesh active
+Step 53 | UAVs: 5/6 | CIRCLE    | (28.9, 19.5, 2.5)    | Err: 21.99m    | TRANSITION | HEALING Mesh active
+Step 54 | UAVs: 5/6 | CIRCLE    | (29.5, 20.1, 2.6)    | Err: 22.13m    | TRANSITION | HEALING Mesh active
+[MESH] Swarm Reconfigured. Deploying to DIAMOND penetration formation!
+---------------------------------------------------------------------------------------------------------
+Step 55 | UAVs: 5/6 | DIAMOND   | (30.0, 20.6, 2.7)    | Err: 18.64m    | TRANSITION | HEALING Mesh active
+Step 56 | UAVs: 5/6 | DIAMOND   | (30.5, 21.2, 2.7)    | Err: 18.76m    | TRANSITION | HEALING Mesh active
+Step 57 | UAVs: 5/6 | DIAMOND   | (31.1, 21.8, 2.8)    | Err: 18.87m    | TRANSITION | HEALING Mesh active
+Step 58 | UAVs: 5/6 | DIAMOND   | (31.6, 22.4, 2.9)    | Err: 18.98m    | TRANSITION | HEALING Mesh active
+Step 59 | UAVs: 5/6 | DIAMOND   | (32.1, 23.0, 3.0)    | Err: 19.07m    | TRANSITION | HEALING Mesh active
+Step 60 | UAVs: 5/6 | DIAMOND   | (32.7, 23.6, 3.0)    | Err: 19.15m    | TRANSITION | HEALING Mesh active
+Step 61 | UAVs: 5/6 | DIAMOND   | (33.2, 24.2, 3.1)    | Err: 19.23m    | TRANSITION | HEALING Mesh active
+Step 62 | UAVs: 5/6 | DIAMOND   | (33.7, 24.8, 3.2)    | Err: 19.29m    | TRANSITION | HEALING Mesh active
+Step 63 | UAVs: 5/6 | DIAMOND   | (34.3, 25.4, 3.3)    | Err: 19.34m    | TRANSITION | HEALING Mesh active
+Step 64 | UAVs: 5/6 | DIAMOND   | (34.8, 26.0, 3.3)    | Err: 19.38m    | TRANSITION | HEALING Mesh active
+Step 65 | UAVs: 5/6 | DIAMOND   | (35.3, 26.5, 3.4)    | Err: 19.42m    | TRANSITION | HEALING Mesh active
+Step 66 | UAVs: 5/6 | DIAMOND   | (35.9, 27.1, 3.5)    | Err: 19.45m    | TRANSITION | HEALING Mesh active
+Step 67 | UAVs: 5/6 | DIAMOND   | (36.4, 27.7, 3.6)    | Err: 19.48m    | TRANSITION | HEALING Mesh active
+Step 68 | UAVs: 5/6 | DIAMOND   | (36.9, 28.3, 3.6)    | Err: 19.50m    | TRANSITION | HEALING Mesh active
+Step 69 | UAVs: 5/6 | DIAMOND   | (37.5, 28.9, 3.7)    | Err: 19.51m    | TRANSITION | HEALING Mesh active
+Step 70 | UAVs: 5/6 | DIAMOND   | (38.0, 29.5, 3.8)    | Err: 19.53m    | TRANSITION | HEALING Mesh active
+Step 71 | UAVs: 5/6 | DIAMOND   | (38.5, 30.1, 3.8)    | Err: 19.54m    | TRANSITION | HEALING Mesh active
+Step 72 | UAVs: 5/6 | DIAMOND   | (39.1, 30.7, 3.9)    | Err: 19.55m    | TRANSITION | HEALING Mesh active
+Step 73 | UAVs: 5/6 | DIAMOND   | (39.6, 31.3, 4.0)    | Err: 19.57m    | TRANSITION | HEALING Mesh active
+Step 74 | UAVs: 5/6 | DIAMOND   | (40.2, 31.9, 4.1)    | Err: 19.58m    | TRANSITION | HEALING Mesh active
+Step 75 | UAVs: 5/6 | DIAMOND   | (40.7, 32.5, 4.1)    | Err: 19.59m    | TRANSITION | HEALING Mesh active
+Step 76 | UAVs: 5/6 | DIAMOND   | (41.2, 33.0, 4.2)    | Err: 19.60m    | TRANSITION | HEALING Mesh active
+Step 77 | UAVs: 5/6 | DIAMOND   | (41.8, 33.6, 4.3)    | Err: 19.62m    | TRANSITION | HEALING Mesh active
+Step 78 | UAVs: 5/6 | DIAMOND   | (42.3, 34.2, 4.4)    | Err: 19.63m    | TRANSITION | HEALING Mesh active
+Step 79 | UAVs: 5/6 | DIAMOND   | (42.8, 34.8, 4.4)    | Err: 19.64m    | TRANSITION | HEALING Mesh active
+Step 80 | UAVs: 5/6 | DIAMOND   | (43.4, 35.4, 4.5)    | Err: 19.66m    | TRANSITION | HEALING Mesh active
+Step 81 | UAVs: 5/6 | DIAMOND   | (43.9, 36.0, 4.6)    | Err: 19.68m    | TRANSITION | HEALING Mesh active
+Step 82 | UAVs: 5/6 | DIAMOND   | (44.4, 36.6, 4.7)    | Err: 19.70m    | TRANSITION | HEALING Mesh active
+Step 83 | UAVs: 5/6 | DIAMOND   | (45.0, 37.2, 4.7)    | Err: 19.72m    | TRANSITION | HEALING Mesh active
+Step 84 | UAVs: 5/6 | DIAMOND   | (45.5, 37.8, 4.8)    | Err: 19.74m    | TRANSITION | HEALING Mesh active
+Step 85 | UAVs: 5/6 | DIAMOND   | (46.0, 38.4, 4.9)    | Err: 19.76m    | TRANSITION | HEALING Mesh active
+Step 86 | UAVs: 5/6 | DIAMOND   | (46.6, 38.9, 4.9)    | Err: 19.79m    | TRANSITION | HEALING Mesh active
+Step 87 | UAVs: 5/6 | DIAMOND   | (47.1, 39.5, 5.0)    | Err: 19.81m    | TRANSITION | HEALING Mesh active
+Step 88 | UAVs: 5/6 | DIAMOND   | (47.6, 40.1, 5.1)    | Err: 19.83m    | TRANSITION | HEALING Mesh active
+Step 89 | UAVs: 5/6 | DIAMOND   | (48.2, 40.7, 5.2)    | Err: 19.86m    | TRANSITION | HEALING Mesh active
+Step 90 | UAVs: 5/6 | DIAMOND   | (48.7, 41.3, 5.2)    | Err: 19.88m    | TRANSITION | HEALING Mesh active
+Step 91 | UAVs: 5/6 | DIAMOND   | (49.2, 41.9, 5.3)    | Err: 19.91m    | TRANSITION | HEALING Mesh active
+Step 92 | UAVs: 5/6 | DIAMOND   | (49.8, 42.5, 5.4)    | Err: 19.93m    | TRANSITION | HEALING Mesh active
+Step 93 | UAVs: 5/6 | DIAMOND   | (50.3, 43.1, 5.5)    | Err: 19.95m    | TRANSITION | HEALING Mesh active
+Step 94 | UAVs: 5/6 | DIAMOND   | (50.9, 43.7, 5.5)    | Err: 19.97m    | TRANSITION | HEALING Mesh active
+Step 95 | UAVs: 5/6 | DIAMOND   | (51.4, 44.3, 5.6)    | Err: 19.99m    | TRANSITION | HEALING Mesh active
+Step 96 | UAVs: 5/6 | DIAMOND   | (51.9, 44.9, 5.7)    | Err: 20.01m    | TRANSITION | HEALING Mesh active
+Step 97 | UAVs: 5/6 | DIAMOND   | (52.5, 45.4, 5.7)    | Err: 20.03m    | TRANSITION | HEALING Mesh active
+Step 98 | UAVs: 5/6 | DIAMOND   | (53.0, 46.0, 5.8)    | Err: 20.04m    | TRANSITION | HEALING Mesh active
+Step 99 | UAVs: 5/6 | DIAMOND   | (53.5, 46.6, 5.9)    | Err: 20.06m    | TRANSITION | HEALING Mesh active
+Step 100 | UAVs: 5/6 | DIAMOND   | (54.1, 47.2, 6.0)    | Err: 20.07m    | TRANSITION | HEALING Mesh active
+Step 101 | UAVs: 5/6 | DIAMOND   | (54.6, 47.8, 6.0)    | Err: 20.08m    | TRANSITION | HEALING Mesh active
+Step 102 | UAVs: 5/6 | DIAMOND   | (55.1, 48.4, 6.1)    | Err: 20.09m    | TRANSITION | HEALING Mesh active
+Step 103 | UAVs: 5/6 | DIAMOND   | (55.7, 49.0, 6.2)    | Err: 20.10m    | TRANSITION | HEALING Mesh active
+Step 104 | UAVs: 5/6 | DIAMOND   | (56.2, 49.6, 6.3)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 105 | UAVs: 5/6 | DIAMOND   | (56.7, 50.2, 6.3)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 106 | UAVs: 5/6 | DIAMOND   | (57.3, 50.8, 6.4)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 107 | UAVs: 5/6 | DIAMOND   | (57.8, 51.3, 6.5)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 108 | UAVs: 5/6 | DIAMOND   | (58.3, 51.9, 6.6)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 109 | UAVs: 5/6 | DIAMOND   | (58.9, 52.5, 6.6)    | Err: 20.11m    | TRANSITION | HEALING Mesh active
+Step 110 | UAVs: 5/6 | DIAMOND   | (59.4, 53.1, 6.7)    | Err: 20.10m    | TRANSITION | HEALING Mesh active
+Step 111 | UAVs: 5/6 | DIAMOND   | (59.9, 53.7, 6.8)    | Err: 20.09m    | TRANSITION | HEALING Mesh active
+Step 112 | UAVs: 5/6 | DIAMOND   | (60.5, 54.3, 6.8)    | Err: 20.08m    | TRANSITION | HEALING Mesh active
+Step 113 | UAVs: 5/6 | DIAMOND   | (61.0, 54.9, 6.9)    | Err: 20.07m    | TRANSITION | HEALING Mesh active
+Step 114 | UAVs: 5/6 | DIAMOND   | (61.5, 55.5, 7.0)    | Err: 20.06m    | TRANSITION | HEALING Mesh active
+Step 115 | UAVs: 5/6 | DIAMOND   | (62.1, 56.1, 7.1)    | Err: 20.05m    | TRANSITION | HEALING Mesh active
+Step 116 | UAVs: 5/6 | DIAMOND   | (62.6, 56.7, 7.1)    | Err: 20.03m    | TRANSITION | HEALING Mesh active
+Step 117 | UAVs: 5/6 | DIAMOND   | (63.2, 57.2, 7.2)    | Err: 20.02m    | TRANSITION | HEALING Mesh active
+Step 118 | UAVs: 5/6 | DIAMOND   | (63.7, 57.8, 7.3)    | Err: 20.00m    | TRANSITION | HEALING Mesh active
+Step 119 | UAVs: 5/6 | DIAMOND   | (64.2, 58.4, 7.4)    | Err: 19.98m    | TRANSITION | HEALING Mesh active
