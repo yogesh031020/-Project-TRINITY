@@ -149,16 +149,28 @@ ros2 launch trinity_swarm swarm_launch.py
 
 ```directory
 -Project-TRINITY/
-├── config/
-│   # Swarm launch parameters and namespace configurations (planned)
 ├── docs/
-│   └── ROS2_Gazebo_Integration_Roadmap.md # ROS2 & Gazebo Spawning and DDS Architecture
+│   ├── trinity_self_healing_rviz.png      # Verified ROS 2 RViz coordination screenshot
+│   ├── trinity_swarm_sim.mp4              # Optimized 3D swarm flight simulation showcase
+│   └── ROS2_Gazebo_Integration_Roadmap.md # Deep-dive Gazebo SITL DDS Integration guide
+├── launch/
+│   ├── swarm_launch.py                    # Multi-node ROS 2 flight simulation launcher
+│   └── trinity_config.rviz                # Custom high-contrast RViz Grid visual layout
 ├── sim/
-│   └── swarm_mission.log                  # Flight telemetry, self-healing, and APF logs
+│   └── swarm_mission.log                  # Standard logging output of simulation cycles
 ├── src/
-│   └── swarm_engine.py                    # Verified 3D Swarm Simulation Engine
-├── LICENSE                                # MIT License
-└── README.md                              # Core project presentation and showcase
+│   └── swarm_engine.py                    # Standalone pure-Python 3D Swarm physics simulator
+├── trinity_swarm/
+│   ├── __init__.py                        # Package module initializer
+│   ├── mock_sitl_bridge.py                # Flight path simulator & fault injection node
+│   ├── swarm_commander_node.py            # Diagnostic central coordination roster server
+│   ├── swarm_visualizer.py                # Telemetry translator to glowing 3D RViz markers
+│   └── uav_swarm_controller.py            # FLOCKING core with decentralized APF offsets
+├── LICENSE                                # MIT Open Source License
+├── README.md                              # Core project presentation and showcase
+├── package.xml                            # Standard ROS 2 colcon package manifest
+├── setup.cfg                              # Setuptools environment configs
+└── setup.py                               # Setup execution exposing CLI node endpoints
 ```
 
 ---
