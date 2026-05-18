@@ -42,4 +42,29 @@ def generate_launch_description():
         )
         ld.add_action(controller_node)
         
+    # 3. Spawn Mock SITL Physics & Telemetry bridge
+    mock_sitl_node = Node(
+        package='trinity_swarm',
+        executable='mock_sitl',
+        name='mock_sitl'
+    )
+    ld.add_action(mock_sitl_node)
+    
+    # 4. Spawn 3D RViz Visualizer Node
+    visualizer_node = Node(
+        package='trinity_swarm',
+        executable='swarm_visualizer',
+        name='swarm_visualizer'
+    )
+    ld.add_action(visualizer_node)
+    
+    # 5. Launch Pre-Configured RViz2 Workspace
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', '/mnt/d/Drone_Projects/Project_ICARUS/Project_TRINITY/launch/trinity_config.rviz']
+    )
+    ld.add_action(rviz_node)
+        
     return ld

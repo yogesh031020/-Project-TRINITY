@@ -23,6 +23,8 @@ setup(
         'console_scripts': [
             'swarm_commander = trinity_swarm.swarm_commander_node:main',
             'uav_controller = trinity_swarm.uav_swarm_controller:main',
+            'mock_sitl = trinity_swarm.mock_sitl_bridge:main',
+            'swarm_visualizer = trinity_swarm.swarm_visualizer:main',
         ],
     },
 )
