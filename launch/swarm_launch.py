@@ -66,5 +66,14 @@ def generate_launch_description():
         arguments=['-d', '/mnt/d/Drone_Projects/Project_ICARUS/Project_TRINITY/launch/trinity_config.rviz']
     )
     ld.add_action(rviz_node)
+    
+    # 6. Static TF Broadcaster to register the 'map' frame in the TF tree
+    static_tf_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_publisher',
+        arguments=['0', '0', '0', '0', '0', '0', 'map', 'base_link']
+    )
+    ld.add_action(static_tf_node)
         
     return ld
