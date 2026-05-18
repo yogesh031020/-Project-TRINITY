@@ -6,6 +6,10 @@
 [![Framework](https://img.shields.io/badge/Middleware-ROS2%20Humble%20%7C%20Gazebo-green?style=for-the-badge&logo=ros)](docs/ROS2_Gazebo_Integration_Roadmap.md)
 [![Complexity](https://img.shields.io/badge/Complexity-Advanced-red?style=for-the-badge)](https://github.com/yogesh031020/-Project-TRINITY)
 
+<p align="center">
+  <video src="docs/trinity_swarm_sim.mp4" width="850" controls autoplay loop muted></video>
+</p>
+
 ---
 
 ## 🚀 Project Overview
@@ -74,6 +78,10 @@ If an active UAV experiences a mechanical error, engine failure, or battery depl
 1. The **Swarm Commander** detects a lost heartbeat.
 2. The engine dynamically re-indexes the offsets of the remaining active swarm roster.
 3. The remaining active drones smoothly shift locations to fill the gap, preserving the structural symmetry and flight aerodynamic balance.
+
+<p align="center">
+  <img src="docs/trinity_self_healing_rviz.png" width="850" alt="ROS 2 RViz 3D Self-Healing Swarm Mesh Simulation">
+</p>
 
 ---
 
