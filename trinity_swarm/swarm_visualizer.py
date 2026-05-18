@@ -54,10 +54,10 @@ class SwarmVisualizer(Node):
         return lambda msg: self.telemetry_callback(uav_id, msg)
 
     def telemetry_callback(self, uav_id, msg: VehicleOdometry):
-        self.uav_positions[uav_id] = [msg.position[0], msg.position[1], msg.position[2]]
+        self.uav_positions[uav_id] = [float(msg.position[0]), float(msg.position[1]), float(msg.position[2])]
 
     def target_callback(self, msg: Point):
-        self.target_coords = [msg.x, msg.y, msg.z]
+        self.target_coords = [float(msg.x), float(msg.y), float(msg.z)]
 
     def formation_callback(self, msg: String):
         self.active_formation = msg.data
@@ -87,9 +87,9 @@ class SwarmVisualizer(Node):
             m_body.id = i
             m_body.type = Marker.SPHERE
             m_body.action = Marker.ADD
-            m_body.pose.position.x = pos[0]
-            m_body.pose.position.y = pos[1]
-            m_body.pose.position.z = pos[2]
+            m_body.pose.position.x = float(pos[0])
+            m_body.pose.position.y = float(pos[1])
+            m_body.pose.position.z = float(pos[2])
             
             # Size mapping
             m_body.scale.x = 2.0
@@ -118,9 +118,9 @@ class SwarmVisualizer(Node):
             m_text.id = i
             m_text.type = Marker.TEXT_VIEW_FACING
             m_text.action = Marker.ADD
-            m_text.pose.position.x = pos[0]
-            m_text.pose.position.y = pos[1]
-            m_text.pose.position.z = pos[2] + 2.0
+            m_text.pose.position.x = float(pos[0])
+            m_text.pose.position.y = float(pos[1])
+            m_text.pose.position.z = float(pos[2]) + 2.0
             m_text.scale.z = 1.2
             
             m_text.color.r = 1.0
@@ -155,17 +155,17 @@ class SwarmVisualizer(Node):
             
             for uid in active_uavs:
                 p = Point()
-                p.x = self.uav_positions[uid][0]
-                p.y = self.uav_positions[uid][1]
-                p.z = self.uav_positions[uid][2]
+                p.x = float(self.uav_positions[uid][0])
+                p.y = float(self.uav_positions[uid][1])
+                p.z = float(self.uav_positions[uid][2])
                 m_lines.points.append(p)
                 
             # Loop the forcefield back to the leader to make a closed loop if 3 drones active
             if len(active_uavs) == 3:
                 p = Point()
-                p.x = self.uav_positions[active_uavs[0]][0]
-                p.y = self.uav_positions[active_uavs[0]][1]
-                p.z = self.uav_positions[active_uavs[0]][2]
+                p.x = float(self.uav_positions[active_uavs[0]][0])
+                p.y = float(self.uav_positions[active_uavs[0]][1])
+                p.z = float(self.uav_positions[active_uavs[0]][2])
                 m_lines.points.append(p)
                 
             ma.markers.append(m_lines)
@@ -178,9 +178,9 @@ class SwarmVisualizer(Node):
         m_target.id = 0
         m_target.type = Marker.CYLINDER
         m_target.action = Marker.ADD
-        m_target.pose.position.x = self.target_coords[0]
-        m_target.pose.position.y = self.target_coords[1]
-        m_target.pose.position.z = self.target_coords[2]
+        m_target.pose.position.x = float(self.target_coords[0])
+        m_target.pose.position.y = float(self.target_coords[1])
+        m_target.pose.position.z = float(self.target_coords[2])
         
         m_target.scale.x = 4.0
         m_target.scale.y = 4.0
@@ -200,9 +200,9 @@ class SwarmVisualizer(Node):
         m_board.id = 0
         m_board.type = Marker.TEXT_VIEW_FACING
         m_board.action = Marker.ADD
-        m_board.pose.position.x = 0.0
-        m_board.pose.position.y = 0.0
-        m_board.pose.position.z = 25.0
+        m_board.pose.position.x = float(0.0)
+        m_board.pose.position.y = float(0.0)
+        m_board.pose.position.z = float(25.0)
         m_board.scale.z = 2.0
         
         m_board.color.r = 0.0

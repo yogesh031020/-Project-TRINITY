@@ -46,12 +46,12 @@ class UavSwarmController(Node):
         # Direct ROS 2 Publishers to local PX4 Autopilot instance
         self.setpoint_pub = self.create_publisher(
             TrajectorySetpoint,
-            f'{self.get_namespace()}/fmu/in/trajectory_setpoint',
+            'fmu/in/trajectory_setpoint',
             10
         )
         self.offboard_pub = self.create_publisher(
             OffboardControlMode,
-            f'{self.get_namespace()}/fmu/in/offboard_control_mode',
+            'fmu/in/offboard_control_mode',
             10
         )
         
@@ -66,7 +66,7 @@ class UavSwarmController(Node):
         # High-frequency self-odometry subscription
         self.create_subscription(
             VehicleOdometry, 
-            f'{self.get_namespace()}/fmu/out/vehicle_odometry', 
+            'fmu/out/vehicle_odometry', 
             self.odometry_callback, 
             10
         )
