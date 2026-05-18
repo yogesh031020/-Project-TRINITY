@@ -1,0 +1,22 @@
+# Python bytecode & cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ROS 2 & colcon build directories
+build/
+install/
+log/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and local configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.pydevproject
