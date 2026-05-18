@@ -86,7 +86,59 @@ We have authored a comprehensive systems architecture roadmap detailing how to p
 
 ---
 
+---
+
+## 🛠️ Step-by-Step "How to Run" & Deployment Guide
+
+This repository contains two execution targets: a high-fidelity ROS 2 / Gazebo interface package, and a verified 3D physical simulation engine.
+
+### Option A: Execute the 3D Swarm Mathematical Simulation (Instant Preview)
+To view the flight trajectory, Artificial Potential Field (APF) avoidance vectors, and mid-flight self-healing re-indexing in action immediately without launching a full ROS 2 environment:
+```bash
+# Run the standalone physics coordination engine
+python3 src/swarm_engine.py
+```
+*This will print step-by-step 3D coordinate trajectories showing the swarm taking off, flying towards coordinate (120, 120, 15), experiencing a critical hardware failure on UAV_3 at step 20, dynamically re-indexing to CIRCLE hold, and successfully acquiring target destination with zero collisions.*
+
+---
+
+### Option B: Compile & Deploy inside a ROS 2 Workspace (Humble/Jazzy)
+To compile the coordination nodes and deploy the decentralized controller stack in your ROS 2 Gazebo SITL workspace, follow these steps:
+
+#### 1. Setup Your ROS 2 Workspace
+Create a standard ROS 2 development workspace and clone the package into the source folder:
+```bash
+mkdir -p ~/trinity_ws/src
+cd ~/trinity_ws/src
+git clone https://github.com/yogesh031020/-Project-TRINITY.git trinity_swarm
+```
+
+#### 2. Install Package Dependencies
+Ensure your workspace includes standard Python ROS 2 packaging templates and px4 message headers:
+```bash
+cd ~/trinity_ws
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+#### 3. Build & Source the Package
+Compile the Python nodes using the standard colcon build tool and source the local overlay:
+```bash
+colcon build --packages-select trinity_swarm
+source install/setup.bash
+```
+
+#### 4. Launch the Swarm Coordination Engine
+Execute the centrally-distributed swarm commander and spawn the 3x isolated UAV controller instances inside active namespaces (`/uav_1`, `/uav_2`, `/uav_3`):
+```bash
+ros2 launch trinity_swarm swarm_launch.py
+```
+*You can now publish global destination waypoints to `/swarm/target_waypoint` and dynamically change active formations in mid-flight by sending String commands ('CIRCLE', 'DIAMOND', 'V-SHAPE') to `/swarm/formation_cmd`!*
+
+---
+
 ## 📂 Repository Directory Layout
+
 ```directory
 -Project-TRINITY/
 ├── config/
