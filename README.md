@@ -80,7 +80,7 @@ If an active UAV experiences a mechanical error, engine failure, or battery depl
 3. The remaining active drones smoothly shift locations to fill the gap, preserving the structural symmetry and flight aerodynamic balance.
 
 <p align="center">
-  <img src="docs/trinity_self_healing_rviz.png" width="850" alt="ROS 2 RViz 3D Self-Healing Swarm Mesh Simulation">
+  <img src="docs/trinity_self_healing_active.png" width="850" alt="ROS 2 RViz 3D Self-Healing Swarm Mesh Simulation">
 </p>
 
 ---
@@ -150,7 +150,7 @@ ros2 launch trinity_swarm swarm_launch.py
 ```directory
 -Project-TRINITY/
 ├── docs/
-│   ├── trinity_self_healing_rviz.png      # Verified ROS 2 RViz coordination screenshot
+│   ├── trinity_self_healing_active.png    # Verified ROS 2 RViz coordination screenshot
 │   ├── trinity_swarm_sim.mp4              # Optimized 3D swarm flight simulation showcase
 │   └── ROS2_Gazebo_Integration_Roadmap.md # Deep-dive Gazebo SITL DDS Integration guide
 ├── launch/
